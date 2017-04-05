@@ -2,5 +2,9 @@
   welcome works!
 </p>
 <div class="categories-list">
-  <app-category-list></app-category-list>
+  <app-category-list (clickedCategorySender)="showProject($event)"></app-category-list>
+</div>
+
+<div class="project-list">
+  <app-project [childCategory]="selectedCategory"></app-project>
 </div>

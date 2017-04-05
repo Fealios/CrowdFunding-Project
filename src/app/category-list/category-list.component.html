@@ -3,8 +3,8 @@
 </p>
 
 <ul>
-  <li><a routerLink="medical">Medical</a></li>
-  <li><a routerLink="emergency">Emergencies</a></li>
-  <li><a routerLink="education">Education</a></li>
-  <li><a routerLink="event">Events</a></li>
+  <li  (click)="clickedCategory('medical')">Medical</li>
+  <li (click)="clickedCategory('emergency')">Emergencies</li>
+  <li (click)="clickedCategory('education')">Education</li>
+  <li (click)="clickedCategory('event')">Events</li>
 </ul>

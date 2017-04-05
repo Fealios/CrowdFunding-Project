@@ -15,20 +15,24 @@ const appRoutes: Routes = [
     path: 'about',
     component: AboutComponent
   },
+  // {
+  //   path: 'medical',
+  //   component: ProjectComponent
+  // },
+  // {
+  //   path: 'emergency',
+  //   component: ProjectComponent
+  // },
+  // {
+  //   path: 'education',
+  //   component: ProjectComponent
+  // },
+  // {
+  //   path: 'event',
+  //   component: ProjectComponent
+  // },
   {
-    path: 'medical',
-    component: ProjectComponent
-  },
-  {
-    path: 'emergency',
-    component: ProjectComponent
-  },
-  {
-    path: 'education',
-    component: ProjectComponent
-  },
-  {
-    path: 'event',
+    path: 'project',
     component: ProjectComponent
   }
 ];
