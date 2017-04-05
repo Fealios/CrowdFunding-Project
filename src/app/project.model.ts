@@ -6,7 +6,8 @@ export class Project {
     public managers: string[],
     public rewards: string,
     public fundGoal: number,
-    public fundUtil: string
+    public fundUtil: string,
+    public category: string
   )
   {  }
 }

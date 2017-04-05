@@ -1,0 +1,47 @@
+{
+  "projects": [{
+    "name": "Fund Raiser",
+    "description": "Help Raise funds for sick Kids",
+    "managers": ["Carl", "Fred"],
+    "rewards": "Lots of cool stuff",
+    "fundGoal": 10500,
+    "fundUtil": "Will give money to a hospital",
+    "category": "medical"
+    },
+    {
+      "name": "Self Driving Car",
+      "description": "Invent Self Driving Car",
+      "managers": ["Elon Musk"],
+      "rewards": "Your own car",
+      "fundGoal": 220000,
+      "fundUtil": "Will invent the car driving AI",
+      "category": "education"
+    },
+    {
+      "name": "All American Camp",
+      "description": "Will  be going to California",
+      "managers": ["Chula Vista"],
+      "rewards": "thank you",
+      "fundGoal": 750,
+      "fundUtil": "Pay for flight",
+      "category": "event"
+    },
+    {
+      "name": "Kurt Cochran Memorial Relief Fund",
+      "description": "Melissa & Kurt were victims in the London terror attack on March 22, 2017.  Melissa was hurt and Kurt was killed.",
+      "managers": ["Clint Payne"],
+      "rewards": "Will make you feel warm and cuddly inside",
+      "fundGoal": 82100,
+      "fundUtil": "needs funds to help cover her regular monthly expenses and loss of income.",
+      "category": "emergency"
+    },
+    {
+      "name": "Nolan's New Lungs",
+      "description": "diagnosed with Cystic Fibrosis that affects a person's lungs, sinuses, and digestive system",
+      "managers": ["Nolan Gottlieb, My brother Joe and his wife Maggie"],
+      "rewards": "God bless you",
+      "fundGoal": 95000 ,
+      "fundUtil": "Utilized for my Lung replacement",
+      "category": "medical"
+    }]
+}
