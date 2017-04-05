@@ -16,7 +16,6 @@ export class ProjectComponent implements OnInit {
 
   projects = this.projectService.projects;
 
-
   constructor(private router: Router, private projectService: ProjectService) { }
 
   ngOnInit() {
@@ -30,9 +29,8 @@ export class ProjectComponent implements OnInit {
     }
   }
 
-
-  goToDetailPage(clickedProjectId: string){
-    this.router.navigate(['project', clickedProjectId]);
+  goToDetailPage(clickedProject){
+    this.router.navigate(['projects', clickedProject.$key]);
   }
 
 }
