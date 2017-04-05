@@ -8,6 +8,9 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { AboutComponent } from './about/about.component';
 import { ProjectComponent } from './project/project.component';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
+import { CategoryListComponent } from './category-list/category-list.component';
+import { routing } from './app.routing';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +18,8 @@ import { ProjectDetailComponent } from './project-detail/project-detail.componen
     WelcomeComponent,
     AboutComponent,
     ProjectComponent,
-    ProjectDetailComponent
+    ProjectDetailComponent,
+    CategoryListComponent
   ],
   imports: [
     BrowserModule,
