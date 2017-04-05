@@ -16,7 +16,7 @@ export class ProjectService {
   }
 
   getProjectById(projectId: string){
-    return this.angularFire.database.object('project/' + projectId);
+    return this.angularFire.database.object('projects/' + projectId);
   }
 
 }

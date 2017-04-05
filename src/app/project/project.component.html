@@ -4,6 +4,6 @@
 
 <div *ngFor="let project of projects | async">
   <div *ngIf="categoryMatches(project.category)">
-    <div (click)= "goToDetailPage(project)">{{project.name}}</div>
+    <div (click)="goToDetailPage(project)">{{project.name}}</div>
   </div>
 </div>

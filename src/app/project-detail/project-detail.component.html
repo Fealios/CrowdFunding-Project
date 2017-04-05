@@ -7,8 +7,12 @@
   <h3>{{(projectToDisplay | async)?.name}}</h3>
   <p>{{(projectToDisplay | async)?.description}}</p>
   <!-- <h4>{{(projectToDisplay | async)?.managers}}</h4> -->
-  <h4>{{(projectToDisplay | async)?.fundGoal}}</h4>
+  <h4>Progress: {{(projectToDisplay | async)?.currentFund}} out of {{(projectToDisplay | async)?.fundGoal}}</h4>
   <h4>{{(projectToDisplay | async)?.fundUtil}}</h4>
   <h4>{{(projectToDisplay | async)?.rewards}}</h4>
+
+</div>
+
+<div class="">
 
 </div>

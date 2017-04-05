@@ -30,7 +30,8 @@ export class ProjectComponent implements OnInit {
   }
 
   goToDetailPage(clickedProject){
-    this.router.navigate(['projects', clickedProject.$key]);
+    console.log(clickedProject.$key)
+    this.router.navigate(['project', clickedProject.$key]);
   }
 
 }
