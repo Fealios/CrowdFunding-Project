@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ProjectService } from '../project.service';
 import { Project } from '../project.model';
 import { Router } from '@angular/router';
+// import { ProjectDetailComponent } from './project-detail/project-detail.component';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 @Component({
@@ -22,11 +23,16 @@ export class ProjectComponent implements OnInit {
   }
 
   categoryMatches(projectCategory: string) {
-    if (projectCategory === this.childCategory) {
+    if (projectCategory === this.childCategory || this.childCategory === "all") {
       return true;
     } else {
       return false;
     }
+  }
+
+
+  goToDetailPage(clickedProjectId: string){
+    this.router.navigate(['project', clickedProjectId]);
   }
 
 }

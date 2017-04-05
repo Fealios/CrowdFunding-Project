@@ -8,12 +8,11 @@ import { Project } from '../project.model';
 })
 export class WelcomeComponent {
  projects : Project[]= [];
- selectedCategory: string;
+ selectedCategory: string = "all";
 
  showProject(clickedCategory){
    this.selectedCategory = clickedCategory;
    console.log(clickedCategory)
-
  }
 
 
