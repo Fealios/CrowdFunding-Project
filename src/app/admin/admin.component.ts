@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { ProjectService } from '../project.service';
 import { Project } from '../project.model';
 
@@ -10,6 +10,7 @@ import { Project } from '../project.model';
 })
 export class AdminComponent implements OnInit {
   projects = this.projectService.projects;
+  selectedProject = null;
 
   constructor(private projectService: ProjectService) { }
 
@@ -19,6 +20,11 @@ export class AdminComponent implements OnInit {
   submitForm(name, description, fundGoal, category) {
     var newProject: Project = new Project(name, description, fundGoal, category);
     this.projectService.addProject(newProject);
+  }
+
+  editButtonClick(clickedProject){
+  this.selectedProject = clickedProject ;
+  console.log(this.selectedProject.name)
   }
 
 }

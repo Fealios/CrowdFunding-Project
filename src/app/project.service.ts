@@ -23,4 +23,19 @@ export class ProjectService {
     this.projects.push(newProject);
   }
 
+  updateProject(localUpdatedProject){
+    var projectEntryInFirebase = this.getProjectById(localUpdatedProject.$key);
+    projectEntryInFirebase.update({
+        name: localUpdatedProject.name,
+        description: localUpdatedProject.description,
+        fundGoal: localUpdatedProject.fundGoal,
+        category: localUpdatedProject.category
+    });
+  }
+
+  deleteProject(projectToDelete) {
+      var projectEntryInFirebase = this.getProjectById(projectToDelete.$key);
+      projectEntryInFirebase.remove();
+  }
+
 }

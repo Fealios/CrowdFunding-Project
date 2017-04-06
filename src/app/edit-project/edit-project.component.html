@@ -1,3 +1,17 @@
-<p>
-  edit-project works!
-</p>
+<div *ngIf="childSelectedProject">
+  <div class="form-group">
+    <label>Name</label>
+    <input [(ngModel)]="childSelectedProject.name" type="text">
+  </div>
+  <div class="form-group">
+    <label>Description</label>
+    <input [(ngModel)]="childSelectedProject.description" type="text">
+  </div>
+  <div class="form-group">
+    <label>Fund Goal</label>
+    <input [(ngModel)]="childSelectedProject.fundGoal" type="number">
+  </div>
+  <button (click)="doneEditing()">Done </button>
+  <button (click)="beginUpdatingProject(childSelectedProject)">Update</button>
+    <button class="btn btn-danger" (click)="delete(childSelectedProject)">Delete</button>
+</div>
