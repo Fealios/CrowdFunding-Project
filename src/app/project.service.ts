@@ -9,10 +9,12 @@ import { User } from './user.model';
 export class ProjectService {
   projects: FirebaseListObservable<any[]>;
   users: FirebaseListObservable<any[]>;
+  donators: FirebaseListObservable<any[]>;
 
   constructor(private angularFire: AngularFire) {
     this.projects = angularFire.database.list('projects');
     this.users = angularFire.database.list('users');
+    this.donators = angularFire.database.list('projects').donators;
   }
 
   getProjects() {
@@ -43,14 +45,15 @@ export class ProjectService {
   }
 
   donate(user, project) {
-      console.log(project)
-      console.log(user)
+    //   console.log(project)
+    //   console.log(user)
+      console.log(project.donators);
       this.users.push(user);
       var projectEntryInFirebase = this.getProjectById(project.$key);
     //   var newGoal = (project.fundGoal -= user.donation)
       projectEntryInFirebase.update({
           currentFund: project.currentFund += user.donation,
-          donators: project.donators.push(user)
+          donators: this.donators.push(user.name)
       })
   }
 

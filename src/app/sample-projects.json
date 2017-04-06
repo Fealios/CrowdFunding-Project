@@ -6,7 +6,8 @@
     "rewards": "Lots of cool stuff",
     "fundGoal": 10500,
     "fundUtil": "Will give money to a hospital",
-    "category": "medical"
+    "category": "medical",
+    "donators": [{"name": "Joey", "donation": 1000}]
     },
     {
       "name": "Self Driving Car",
@@ -15,7 +16,8 @@
       "rewards": "Your own car",
       "fundGoal": 220000,
       "fundUtil": "Will invent the car driving AI",
-      "category": "education"
+      "category": "education",
+      "donators": [{"name": "Joey", "donation": 1000}]
     },
     {
       "name": "All American Camp",
@@ -24,7 +26,8 @@
       "rewards": "thank you",
       "fundGoal": 750,
       "fundUtil": "Pay for flight",
-      "category": "event"
+      "category": "event",
+      "donators": [{"name": "Joey", "donation": 1000}]
     },
     {
       "name": "Kurt Cochran Memorial Relief Fund",
@@ -33,7 +36,8 @@
       "rewards": "Will make you feel warm and cuddly inside",
       "fundGoal": 82100,
       "fundUtil": "needs funds to help cover her regular monthly expenses and loss of income.",
-      "category": "emergency"
+      "category": "emergency",
+      "donators": [{"name": "Joey", "donation": 1000}]
     },
     {
       "name": "Nolan's New Lungs",
@@ -42,6 +46,7 @@
       "rewards": "God bless you",
       "fundGoal": 95000 ,
       "fundUtil": "Utilized for my Lung replacement",
-      "category": "medical"
+      "category": "medical",
+      "donators": [{"name": "Joey", "donation": 1000}]
     }]
 }

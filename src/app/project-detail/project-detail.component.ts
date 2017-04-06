@@ -18,16 +18,22 @@ export class ProjectDetailComponent implements OnInit {
   constructor(private route: ActivatedRoute, private location: Location, private projectService: ProjectService) { }
 
   ngOnInit() {
-    this.route.params.forEach((urlParameters) => {
-     this.projectId = urlParameters['id'];
+    this.route.params.forEach((urlParametersArray) => {
+     this.projectId = urlParametersArray['id'];
    });
-   this.projectToDisplay = this.projectService.getProjectById(this.projectId);
+   this.projectService.getProjectById(this.projectId).subscribe(dataLastEmittedFromObserver =>{
+       this.projectToDisplay = dataLastEmittedFromObserver;
+   });
+   // this.albumService.getAlbumById(this.albumId).subscribe(dataLastEmittedFromObserver => {
+   //   this.albumToDisplay = dataLastEmittedFromObserver;
   }
 
   addDonation(name, donation) {
       var newUser: User = new User(name, donation);
       console.log(newUser.name);
       console.log(newUser.donation);
+      console.log(this.projectToDisplay);
+      console.log(this.projectToDisplay.donators);
       this.projectService.donate(newUser, this.projectToDisplay);
   }
 
