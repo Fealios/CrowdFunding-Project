@@ -3,6 +3,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Project } from '../project.model';
 import { ProjectService } from '../project.service';
+import { User } from '../user.model';
 
 @Component({
   selector: 'app-project-detail',
@@ -21,6 +22,13 @@ export class ProjectDetailComponent implements OnInit {
      this.projectId = urlParameters['id'];
    });
    this.projectToDisplay = this.projectService.getProjectById(this.projectId);
+  }
+
+  addDonation(name, donation) {
+      var newUser: User = new User(name, donation);
+      console.log(newUser.name);
+      console.log(newUser.donation);
+      this.projectService.donate(newUser, this.projectToDisplay);
   }
 
 }
