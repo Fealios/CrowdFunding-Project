@@ -5,7 +5,7 @@ import { Project } from './project.model';
 import { AboutComponent } from './about/about.component';
 import { ProjectComponent } from './project/project.component';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
-
+import { AdminComponent }   from './admin/admin.component';
 
 const appRoutes: Routes = [
   {
@@ -39,6 +39,10 @@ const appRoutes: Routes = [
   {
     path: 'project/:id',
     component: ProjectDetailComponent
+  },
+  {
+    path:'admin',
+    component: AdminComponent
   }
 ];
 

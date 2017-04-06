@@ -1,0 +1,39 @@
+<p>
+  admin works!
+</p>
+
+<div *ngFor="let project of projects | async">
+  <div class="panel panel-default">
+    <div class="panel-body">
+  <li>Name:{{project.name}}</li>
+  <li>Description:{{project.description}}</li>
+  <li>Fund to Raise:{{project.fundGoal}}</li>
+  <li>Category:{{project.category}}</li>
+</div>
+</div>
+</div>
+
+
+<h3>Add New Project</h3>
+<div class="project-form">
+<div class="form-group">
+  <label>Name Of Project:</label>
+  <input name="name" type ="text" #newName>
+</div>
+<div class="form-group">
+  <label>Description:</label>
+  <textarea #newDescription></textarea>
+</div>
+<div class="form-group">
+  <label>Fund</label>
+  <input name="name" type ="number" #newFund>
+</div>
+<div class="form-group">
+  <select #newCategory>
+    <option value="medical">Medical</option>
+    <option value="emergency">Emergency</option>
+    <option value="education">Education</option>
+    <option value="event">Events</option>
+  </select>
+</div>
+<button type="button" (click)="submitForm(newName.value, newDescription.value, newFund.value, newCategory.value)">Submit </button>
